@@ -1,10 +1,10 @@
 
-GET localhost:3000/
-
-
-POST localhost:3000/download HTTP/1.1
+POST localhost:3000/download
 content-type: application/json
 
 {
-    "url": ""
+    "url": "https://www.youtube.com/watch?v=f_sEWa5hA0Q"
 }
+
+
+GET localhost:3000/
