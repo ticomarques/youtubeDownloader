@@ -7,7 +7,7 @@ const PORT = 3000;
 app.use(express.json());
 
 app.get("/", async (req, res) => {
-  await res.send("Welcome to youtube downloader service!");
+  await res.status(200).send("Welcome to youtube downloader service!");
 });
 
 app.post("/download", async (req, res) => {
@@ -21,7 +21,7 @@ app.post("/download", async (req, res) => {
   let duration = info.videoDetails.lengthSeconds;
   //res.download('video.mp4')
   //res.setHeader("Content-Disposition", "attachment; video.mp4");
-  res.send({
+  res.status(200).send({
     success: `Downloading: ${title} - id: (${videoId}) - Duration: ${Math.round(
       duration / 60
     )} min.`,
